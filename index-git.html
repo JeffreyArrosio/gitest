@@ -4,15 +4,232 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="JavaScript programación fácil">
+    <meta name="descripton"
+        content="Aprende a programar en JS de una manera dinámica y sencilla. Conviertete en un experto">
+    <meta name="autor" content="Jeffrey Arrosio">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+
     <title>Magic CL</title>
 
     <link rel="shortcut icon" href="../IMG/joya.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="../CSS/estilospropios.css">
+
 </head>
 
 <body>
+
+
+    <header id="header" class="navbar navbar-expand-sm sticky-top bg-white">
+        <div class="container-fluid">
+            <a class="navbar-brand"><img src="../imagenes/w4.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www3.gobiernodecanarias.org/medusa/edublog/cifpmajadamarcial/"
+                            target="_blank">CIFP Majada Marcial</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html" target="_blank">Página principal</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/JeffreyArrosio" target="_blank">Github del
+                            creador</a>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <button type="button" id="mainMenu" class="btn btn-success dropdown-toggle"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Modo
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="mainMenu">
+                                <li><a class="btn dropdown-item" onclick="jsDark()">Oscuro</a></li>
+                                <li><a class="btn dropdown-item" onclick="jsLight()">Claro</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="text" placeholder="Search">
+                    <button class="btn btn-success" type="button">Search</button>
+                </form>
+            </div>
+        </div>
+    </header>
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
+        <div class="container-fluid justify-content-center">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#" onclick="noLink()">HTML</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#" onclick="noLink()">CSS</a>
+                </li>
+                <li class="nav-item bg-success">
+                    <a class="nav-link text-light">JAVASCRIPT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#" onclick="noLink()">C#</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#" onclick="noLink()">JAVA</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#" onclick="noLink()">MYSQL</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#" onclick="noLink()">BOOTSTRAP</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <aside id="aside" class="col-md-3 bg-light p-4 sticky-sm-top">
+                <div class="sticky-sm-top">
+                    <p>Navegación rápida</p>
+                    <ul class="list-group list-group-flush mt-2 ">
+                        <li class="list-group-item"><a class="text-reset text-decoration-none" href="#tsj">Tutorial
+                                JS</a></li>
+                        <li class="list-group-item"><a class="text-reset text-decoration-none" href="#pjs">¿Porque
+                                JS?</a></li>
+                        <li class="list-group-item"><a class="text-reset text-decoration-none" href="#ej">Ejemplos
+                                sencillos</a></li>
+                        <li class="list-group-item"><a class="text-reset text-decoration-none" href="#cet">Caracter en
+                                texto</a></li>
+                        <li class="list-group-item"><a class="text-reset text-decoration-none" href="#hoy">Dia de
+                                hoy</a></li>
+                        <li class="list-group-item"><a class="text-reset text-decoration-none" href="#s2n">Rango de dos
+                                números</a></li>
+                        <li class="list-group-item"><a class="text-reset text-decoration-none" href="#tablas">Rellenar
+                                una tabla</a></li>
+                    </ul>
+                </div>
+
+            </aside>
+            <main id="main" class="col-md-9 p-5">
+                <article>
+                    <h2 id="tjs">Tutorial de javascript</h2>
+                    <div class="bg-success bg-gradient p-4 text-light">
+                        <p>JavaScript es el lenguaje de programación más popular del mundo.</p>
+                        <p>JavaScript es el lenguaje de programación de la web.</p>
+                        <p>JavaScript es fácil de aprender.</p>
+                        <p>Este tutorial te enseñará JavaScript desde lo básico hasta lo avanzado.</p>
+                    </div>
+                    <h2 id="pjs">¿Por qué estudiar JavaScript?</h2>
+                    <div class="bg-success bg-gradient p-4 text-light">
+                        <p>JavaScript es uno de los 3 lenguajes que todos los desarrolladores web deben aprender:</p>
+                        <ol>
+                            <li>HTML para definir el contenido de las páginas web</li>
+                            <li>CSS para especificar el diseño de las páginas web</li>
+                            <li>JavaScript para programar el comportamiento de las páginas web</li>
+                        </ol>
+                    </div>
+                    <h2 id="ej" class="mt-5">Algunos ejemplos sencillos</h2>
+                    <h3 class="display-6">Manejo de la propiedad <i>String</i></h3>
+                    <p id="cet" class="h4">Vamos a comprobar el número de veces que sale un caracter en un texto:</p>
+                    <p>EJ: <i>Hola, ¿cómo estas?</i> La "a" sale 2 veces en la frase.</p>
+                    <form>
+                        <div class="mb-3 mt-3">
+                            <input type="text" id="frase" placeholder="Introcude la frase" name="frase">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" id="char" placeholder="Introduce el caracter a analizar" name="char">
+                        </div>
+                        <button type="button" onclick="formulario()" class="btn btn-success">Comprobar</button>
+                        <span>Número de veces que aparece: <span id="res" class="badge bg-success mr-1"></span></span>
+                        <div id="aco">
+                            <a href="#cod" class="btn bg-success text-light mt-4" data-bs-toggle="collapse">Ver como se
+                                hace</a>
+                            <div id="cod" class="text-center collapse mt-2" data-bs-parent="#aco">
+                                <img class="img-fluid" src="../imagenes/numC.png" alt="">
+                            </div>
+                        </div>
+                    </form>
+                    <h3 class="display-6 mt-4">Manejo del tipo <i>Date</i></h3>
+                    <p id="hoy" class="h4 ">Comprobar en que día de la semana estamos HOY</p>
+                    <button type="button" onclick="diaDeLaSemana()" class="btn btn-success">HOY ES:</button>
+                    <p id="day" class="display-6"></p>
+                    <div id="aco1">
+                        <a href="#cod1" class="btn bg-success text-light mt-2" data-bs-toggle="collapse">Ver como se
+                            hace</a>
+                        <div id="cod1" class="text-center collapse mt-2" data-bs-parent="#aco1">
+                            <img class="img-fluid" src="../imagenes/dia.png" alt="">
+                        </div>
+                    </div>
+                    <h3 class="display-6 mt-4">Manejo de los números con <i>Number</i></h3>
+                    <p id="s2n" class="h4">Obtener la suma de todos los números situados entre 2 valores (ambos
+                        inclusive)
+                    </p>
+                    <p>EJ: si tenemos <i>1</i> y <i>10</i> como los valores, la suma de todos los números
+                        (1,2,3,4,5,6,7,8,9 y 10)
+                        será 55</p>
+                    <form>
+                        <div class="mb-3 mt-3">
+                            <input type="text" id="num1" placeholder="0" name="num1">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" id="num2" placeholder="0" name="num2">
+                        </div>
+                        <button type="button" onclick="rango()" class="btn btn-success">Comprobar</button>
+                        <span>La suma total es: <span id="resNum" class="badge bg-success mr-1"></span></span>
+                        <div id="aco2">
+                            <a href="#cod2" class="btn bg-success text-light mt-4" data-bs-toggle="collapse">Ver como se
+                                hace</a>
+                            <div id="cod2" class="text-center collapse mt-2" data-bs-parent="#aco2">
+                                <img class="img-fluid" src="../imagenes/rango.png" alt="">
+                            </div>
+                        </div>
+                    </form>
+                    <h3 id="tablas" class="display-6 mt-4">Insercción de datos en una tabla</h3>
+                    <p class="h4">Rellenar una tabla de 5x4 con datos pedido mediante <i>Prompt</i></p>
+                    <button type="button" onclick="rellenar()" class="btn btn-success">Rellenar tabla</button>
+                    <span><button id="borra" type="button" onclick="borrar()" class="btn btn-danger" disabled>Borrar
+                            tabla</button></span>
+                    <table id="relleno" class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Colores</th>
+                                <th>Frutas</th>
+                                <th>Animales</th>
+                                <th>Comidas</th>
+                                <th>Paises</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Aqui se rellenara por JS -->
+                        </tbody>
+                    </table>
+                    <h3 class="display-6">Ver como se hace:</h3>
+                    <div id="aco3">
+                        <a href="#cod3" class="btn bg-success text-light mt-4" data-bs-toggle="collapse">Como se
+                            rellena</a>
+                        <div id="cod3" class="text-center collapse mt-2" data-bs-parent="#aco3">
+                            <img class="img-fluid" src="../imagenes/rellenar.png" alt="">
+                        </div>
+                    </div>
+                    <div id="aco4">
+                        <a href="#cod4" class="btn bg-success text-light mt-4" data-bs-toggle="collapse">Como se
+                            borra</a>
+                        <div id="cod4" class="text-center collapse mt-2" data-bs-parent="#aco4">
+                            <img class="img-fluid" src="../imagenes/borrar.png" alt="">
+                        </div>
+                    </div>
+                </article>
+            </main>
+        </div>
+    </div>
+    <footer class="container-fluid p-2 bg-dark text-light text-center">
+        <p><i>Trabajo final del segundo trimestre BOOTSTRAP y JAVASCRIPT</i></p>
+        <p><i>Realizado por Jeffrey Arrosio para LND</i></p>
+    </footer>
+
 
     <!-- La cabezera  -->
 
